@@ -14,6 +14,6 @@ curl_close($ch);
 
 //We insert all new breweries
 foreach ($breweries as $brewery) {
-	$command = "wp post create --post_type=brewery --post_title'" . $brewery['name'] . "' --post_date=" . $brewery['created_at'];
+	$command = 'wp post create --post_type=brewery --post_title="' . $brewery['name'] . '"';
 	echo "\n$command\n" . shell_exec($command);
 }
